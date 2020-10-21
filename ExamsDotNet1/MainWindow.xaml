@@ -1,0 +1,39 @@
+﻿<Window x:Class="ExamsDotNet1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamsDotNet1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="542" Width="1129">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="190,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"><Run Text="AJOUT CLIENT"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="code"  HorizontalAlignment="Left" Height="23" Margin="135,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+        <Label Content="Code" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,65,0,0" Width="65"/>
+        <Label Content="Prenom" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,105,0,0" Width="63"/>
+        <Label Content="Nom" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="62,145,0,0" RenderTransformOrigin="0.474,-1.115"/>
+        <Label Content="Adresse" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,195,0,0"/>
+        <TextBox x:Name="firstName" HorizontalAlignment="Left" Height="23" Margin="135,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+        <TextBox x:Name="lastName" HorizontalAlignment="Left" Height="23" Margin="135,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+        <TextBox x:Name="adress" HorizontalAlignment="Left" Height="23" Margin="135,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+        <Label Content="Email" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,240,0,0"/>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Height="23" Margin="135,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        <Button Content="Enregistrer" HorizontalAlignment="Left" Margin="140,375,0,0" VerticalAlignment="Top" Width="160" Height="30" Click="Button_Click"/>
+        <DataGrid ColumnWidth="*" HorizontalAlignment="Left" AutoGenerateColumns="False" x:Name="tableDTG" Height="295" Margin="370,55,0,0" VerticalAlignment="Top" Width="675">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Code" Binding="{Binding code}"  />
+                <DataGridTextColumn Header="Prenom"  Binding="{Binding prenom}"   />
+                <DataGridTextColumn Header="Nom"  Binding="{Binding nom}"  />
+                <DataGridTextColumn Header="Tel"  Binding="{Binding tel}" />
+                <DataGridTextColumn Header="Adress"   Binding="{Binding adresse}"  />
+                <DataGridTextColumn Header="Email"  Binding="{Binding email}"  />
+                <DataGridTextColumn Header="Categorie"  Binding="{Binding categorie.libelle}"  />
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox x:Name="combox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="180" Margin="135,320,0,0"/>
+        <Label Content="Categories" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="34,319,0,0" Width="91"/>
+        <Label Content="Tel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,280,0,0"/>
+        <TextBox x:Name="tel" HorizontalAlignment="Left" Height="23" Margin="135,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+
+    </Grid>
+</Window>
